@@ -1,0 +1,6 @@
+{
+  "name": "البوابة الجامعية الذكية — جامعة القاهرة",
+  "description": "بوابة جامعية ذكية متكاملة للطلاب وأعضاء هيئة التدريس: الجداول، الحضور الذكي بالـ QR، المكتبة التخصصية، تسليم المهام والمجتمع الأكاديمي.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
