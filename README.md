@@ -2,8 +2,6 @@
 
 > A smart all-in-one university portal for students and faculty: schedules, smart QR attendance, department-scoped library, assignment submissions, and academic community.
 
-line 3
->
 > `to make the life ease`
 
 **Repo:** https://github.com/hoba101/university-map — branch `main` — generated from `google-gemini/aistudio-repository-template`
@@ -58,8 +56,9 @@ All data is currently `mock` from `src/data/mockData.ts` — no backend yet. Rea
 - **Frontend:** React `19.0.1` + React DOM + TypeScript `ES2022` + Vite `8.3.0` + `@vitejs/plugin-react 6.1.1`
 - **Styling:** Tailwind CSS `4.3.3` + `@tailwindcss/vite` + `index.css` CSS variables + `Cairo + JetBrains Mono` fonts
 - **Icons/Anim:** `lucide-react 0.546.0` + `motion 12.23.24`
-- **AI/Server:** `@google/genai 2.4.0` + `express 4.21.2` + `dotenv 17.2.3`
-- **Dev:** `tsx`, `esbuild`, `autoprefixer`, `@types/*`
+- **Tooling:** `autoprefixer`, `@types/*`
+
+> This repo is the frontend prototype only; the mocked data layer is designed to be replaced by a real API.
 
 ## File Structure
 
@@ -67,7 +66,7 @@ All data is currently `mock` from `src/data/mockData.ts` — no backend yet. Rea
 university-map/
 ├── index.html              # Vite entry + RTL + Cairo + #root + /src/main.tsx
 ├── metadata.json           # Portal name/description + MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API
-├── package.json            # react-example 0.0.0 + dev/build/preview/clean/lint scripts
+├── package.json            # university-map 1.0.0 + dev/build/preview/clean/lint scripts
 ├── vite.config.ts          # react + tailwind + @ alias + HMR/DISABLE_HMR
 ├── tsconfig.json           # ES2022 + bundler + react-jsx + @/* + noEmit
 ├── .env.example            # GEMINI_API_KEY + APP_URL
@@ -154,8 +153,7 @@ One device fingerprint `deviceFingerprint` per user — one student = one device
 
 - Generated from the AI Studio template, do not edit the `DISABLE_HMR` block in `vite.config.ts`.
 - `metadata.json` requires `MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API` — all Gemini calls must be server-side.
-- The original repo has no `README`, `LICENSE`, or tests — this file is a proposed doc, push it via PR.
-- Suggested next step: replace `mockData` with a real API `GET /library?week&type&search` filtered by JWT + `Swagger /swagger.json` to generate types.
+- All data currently comes from `src/data/mockData.ts`. The next milestone is a real API (`GET /library?week&type&search` filtered by JWT) plus an OpenAPI schema for generated types.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 # البوابة الجامعية الذكية — جامعة القاهرة | university-map
 
@@ -215,8 +213,9 @@ One device fingerprint `deviceFingerprint` per user — one student = one device
 - **Frontend:** React `19.0.1` + React DOM + TypeScript `ES2022` + Vite `8.3.0` + `@vitejs/plugin-react 6.1.1`
 - **Styling:** Tailwind CSS `4.3.3` + `@tailwindcss/vite` + `index.css` بمتغيرات CSS + خط `Cairo + JetBrains Mono`
 - **Icons/Anim:** `lucide-react 0.546.0` + `motion 12.23.24`
-- **AI/Server:** `@google/genai 2.4.0` + `express 4.21.2` + `dotenv 17.2.3`
-- **Dev:** `tsx`, `esbuild`, `autoprefixer`, `@types/*`
+- **Tooling:** `autoprefixer`, `@types/*`
+
+> This repo is the frontend prototype only; the mocked data layer is designed to be replaced by a real API.
 
 ## هيكل الملفات
 
@@ -224,7 +223,7 @@ One device fingerprint `deviceFingerprint` per user — one student = one device
 university-map/
 ├── index.html              # دخلة Vite + RTL + Cairo + #root + /src/main.tsx
 ├── metadata.json           # اسم ووصف البوابة + MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API
-├── package.json            # react-example 0.0.0 + scripts dev/build/preview/clean/lint
+├── package.json            # university-map 1.0.0 + scripts dev/build/preview/clean/lint
 ├── vite.config.ts          # react + tailwind + alias @ + HMR/DISABLE_HMR
 ├── tsconfig.json           # ES2022 + bundler + react-jsx + @/* + noEmit
 ├── .env.example            # GEMINI_API_KEY + APP_URL
@@ -311,5 +310,4 @@ npm run clean    # مسح dist
 
 - المشروع مولّد من قالب AI Studio، `vite.config.ts` لا تعدل جزء `DISABLE_HMR`.
 - `metadata.json` يطلب صلاحية `MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API` — أي استدعاء Gemini يكون server-side فقط.
-- لا يوجد `README` أو `LICENSE` أو تستات في الريبو الأصلي — الملف ده مقترح توثيق، ارفعه ب PR.
-- الخطوة الجاية المقترحة: ربط `mockData` بـ API حقيقي `GET /library?week&type&search` بفلترة JWT + `Swagger /swagger.json` لتوليد Types.
+- كل البيانات حالياً من `src/data/mockData.ts`. الخطوة الجاية: ربطها بـ API حقيقي (`GET /library?week&type&search` بفلترة JWT) + OpenAPI schema لتوليد الأنواع.
